@@ -31,7 +31,6 @@ public class Trapezium extends Quadrilateral{
 
 	@Override
 	double getArea() {
-		return 0.0;
 		
 	}
 

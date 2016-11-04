@@ -22,6 +22,7 @@ public class Trapezium extends Quadrilateral{
 		return isTrapezium;
 	}
 
+<<<<<<< HEAD
 
 	@Override
 	double getPerimeter() {
@@ -31,14 +32,33 @@ public class Trapezium extends Quadrilateral{
 
 	@Override
 	double getArea() {
-		return 0.0;
+=======
+	@Override
+	void parallels() {
+		// TODO Auto-generated method stub
 		
 	}
 
+	@Override
+	double getPerimeter() {
+>>>>>>> 6ad2c32ef2871ed9a97b70bd58438e591a549f0a
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+<<<<<<< HEAD
 
 	@Override
 	void parallels() {
 		// TODO Auto-generated method stub
-
+		
+=======
+	@Override
+	double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+>>>>>>> 6ad2c32ef2871ed9a97b70bd58438e591a549f0a
 	}
+	
+	
 }

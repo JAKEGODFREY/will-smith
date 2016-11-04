@@ -31,7 +31,6 @@ public class Trapezium extends Quadrilateral{
 
 	@Override
 	double getArea() {
-		return 0.0;
 		
 	}
 
@@ -40,5 +39,5 @@ public class Trapezium extends Quadrilateral{
 	void parallels() {
 		// TODO Auto-generated method stub
 
-	}
+	
 }
