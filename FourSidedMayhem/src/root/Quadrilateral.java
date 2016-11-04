@@ -61,7 +61,7 @@ public abstract class Quadrilateral {
 		this.line4 = line4;
 	}
 	
-	abstract void parallels();
+	abstract int parallels();
 	abstract double getPerimeter();
 	abstract double getArea();
 	

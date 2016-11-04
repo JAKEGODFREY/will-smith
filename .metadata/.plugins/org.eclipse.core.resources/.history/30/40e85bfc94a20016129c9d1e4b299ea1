@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import src.root.Parallelogram;
+import static src.root.Parallelogram.*;
 import src.root.Point;
 
 
@@ -19,17 +20,16 @@ public class ParallelogramTestCases {
 	
 	@Test
 	public void getAreaTest() {
-		Double target = new Double(90.0);
-		Double actual  = testParallelogram.getArea();
-		
-		assertEquals(target, actual);
+		assertEquals(90.0, testParallelogram.getArea());
+	}
+	
+	@Test
+	public void isParallelogramTest(){
+		assertEquals(true, Parallelogram);
 	}
 	
 	public void getPerimeterTest(){
-		
-		Double target = new Double(42.07);
-		Double actual  = testParallelogram.getPerimeter();
-		assertEquals(target, actual);
+		assertEquals(42.07, testParallelogram.getPerimeter());
 	
 	}
 	

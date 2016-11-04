@@ -19,17 +19,11 @@ public class ParallelogramTestCases {
 	
 	@Test
 	public void getAreaTest() {
-		Double target = new Double(90.0);
-		Double actual  = testParallelogram.getArea();
-		
-		assertEquals(target, actual);
+		assertEquals(90.0, testParallelogram.getArea());
 	}
 	
 	public void getPerimeterTest(){
-		
-		Double target = new Double(42.07);
-		Double actual  = testParallelogram.getPerimeter();
-		assertEquals(target, actual);
+		assertEquals(42.07, testParallelogram.getPerimeter());
 	
 	}
 	
