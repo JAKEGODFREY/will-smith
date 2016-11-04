@@ -1,5 +1,5 @@
 
 public abstract class Quadrilateral {
 
-	abstract parallels();
+	abstract void parallels();
 }
