@@ -6,8 +6,10 @@ import org.junit.Test;
 public class RectangleTestCases {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void getAreaTest() {
+		Rectangle testRectangle = new Rectangle(10); 
+		
+		assertEquals("area must be 100", 100, testRectangle.getArea());
 	}
 
 }
