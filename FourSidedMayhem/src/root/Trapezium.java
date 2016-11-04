@@ -1,18 +1,29 @@
 package src.root;
 public class Trapezium extends Quadrilateral{
 
-	private Line longBase;
-	private Line shortBase;
-	private Line slantingSide1;
-	private Line slantingSide2;
+	private Point point1;
+	private Point point2;
+	private Point point3;
+	private Point point4;
+	Quadrilateral quadrilateral = new Trapezium(point1, point2, point3, point4);
 	
-	public boolean isTrapezium(Quadrilateral quad){
+	public Trapezium(Point point1, Point point2, Point point3, Point point4){
+		this.point1 = point1;
+		this.point2 = point2;
+		this.point3 = point3;
+		this.point4 = point4;		
+		
+	}
+	
+	public boolean isTrapezium(Quadrilateral quad) throws ShapeException{
+		
+		
 		boolean isTrapezium = false;
 				
-		if(longBase.getSlope()==shortBase.getSlope() && slantingSide1.getSlope()!=slantingSide2.getSlope()){
+		if(quadrilateral.getLine1().getSlope()==quadrilateral.getLine3().getSlope() && quadrilateral.getLine2().getSlope()!=quadrilateral.getLine4().getSlope()){
 			isTrapezium = true;
 		}
-		else if(slantingSide1.getSlope()==slantingSide2.getSlope() && longBase.getSlope()!=shortBase.getSlope()){
+		else if(quadrilateral.getLine2().getSlope()==quadrilateral.getLine4().getSlope() && quadrilateral.getLine1().getSlope()!=quadrilateral.getLine3().getSlope()){
 			isTrapezium = true;
 		}
 		else{
@@ -25,10 +36,10 @@ public class Trapezium extends Quadrilateral{
 	@Override
 	int parallels() {
 		int numberOfParallelSides = 0;
-		if(longBase.getSlope()==shortBase.getSlope()){
+		if(quadrilateral.getLine1().getSlope()==quadrilateral.getLine3().getSlope()){
 			numberOfParallelSides += 1;
 		}
-		if(slantingSide1.getSlope()==slantingSide2.getSlope()){
+		if(quadrilateral.getLine2().getSlope()==quadrilateral.getLine4().getSlope()){
 			numberOfParallelSides += 1;
 		}
 		return numberOfParallelSides;
@@ -36,14 +47,14 @@ public class Trapezium extends Quadrilateral{
 
 	@Override
 	double getPerimeter() {
-		return longBase.getLength() + shortBase.getLength() + slantingSide1.getLength() + slantingSide2.getLength();
+		return quadrilateral.getLine1().getLength(point1, point2) + quadrilateral.getLine2().getLength(point2, point3) + quadrilateral.getLine3().getLength(point3, point4) + quadrilateral.getLine4().getLength(point4, point1);
 	}
 
 	@Override
 	double getArea() {
-		double lengthDifference = longBase.getLength() - shortBase.getLength();
-		double height = Math.sqrt((slantingSide1.getLength()*slantingSide1.getLength())-(lengthDifference*lengthDifference));
-		return ((longBase.getLength()+shortBase.getLength())/2)*height;
+		double lengthDifference = quadrilateral.getLine1().getLength(point1, point2) - quadrilateral.getLine4().getLength(point4, point1);
+		double height = Math.sqrt((quadrilateral.getLine2().getLength(point2, point3)*quadrilateral.getLine2().getLength(point2, point3))-(lengthDifference*lengthDifference));
+		return ((quadrilateral.getLine1().getLength(point1, point2)+quadrilateral.getLine4().getLength(point4, point1))/2)*height;
 	}
 	
 	
