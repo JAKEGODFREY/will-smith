@@ -31,7 +31,6 @@ public class Parallelogram extends Trapezium {
 
 	
 	@Override
-	public
 
 	double getArea() {
 		double area;

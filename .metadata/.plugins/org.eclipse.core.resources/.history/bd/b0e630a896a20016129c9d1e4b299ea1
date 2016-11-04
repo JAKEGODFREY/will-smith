@@ -25,8 +25,6 @@ public class ParallelogramTestCases {
 		assertEquals(target, actual);
 	}
 	
-	
-	@Test
 	public void getPerimeterTest(){
 		
 		Double target = new Double(42.07);
