@@ -24,7 +24,7 @@ public class Trapezium extends Quadrilateral{
 
 
 	@Override
-	public double getPerimeter() {
+	double getPerimeter() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

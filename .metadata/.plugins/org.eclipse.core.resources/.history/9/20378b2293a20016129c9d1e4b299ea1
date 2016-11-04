@@ -19,17 +19,12 @@ public class ParallelogramTestCases {
 	
 	@Test
 	public void getAreaTest() {
-		assertEquals(90.0, testParallelogram.getArea());
+		 
+
+		assertEquals("area must be 90.0", 90.0, testParallelogram.getArea());
 	}
 	
-	@Test
-	public void isParallelogramTest(){
-		assertEquals(true, testParallelogram.getPerimeter());
-	}
-	
-	public void getPerimeterTest(){
-		assertEquals()
-	
+	public void is
 	
 	
 	

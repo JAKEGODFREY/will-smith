@@ -1,0 +1,17 @@
+package src.JUnitTests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class ParallelogramTestCases {
+
+	@Test
+	public void getAreaTest() {
+		Parallelogram testParallelogram= new Parallelogram(new Point(5.0,5.0), new Point(5.0,5.0),new Point(5.0,5.0),new Point(5.0,5.0)); 
+		
+		assertEquals("area must be 100", 100, testParallelogram.getArea());
+	}
+
+}
