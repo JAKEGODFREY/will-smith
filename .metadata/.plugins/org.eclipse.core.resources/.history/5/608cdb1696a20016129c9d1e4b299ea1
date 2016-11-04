@@ -6,8 +6,11 @@ public class Parallelogram extends Trapezium {
 		
 		Quadrilateral quad = new Parallelogram(point1, point2, point3, point4);
 			
+<<<<<<< HEAD
+		if ((quad.getLine1().getLength() == quad.getLine3().getLength())&&(quad.getLine2().getLength() == quad.getLine4().getLength() )){
+=======
 		if ((quad.getLine1().getLength(point1, point2) == quad.getLine3().getLength(point3, point4))&&(quad.getLine2().getLength(point2, point3) == quad.getLine4().getLength(point4, point1) )){
-
+>>>>>>> e683a78250bb08a4da6aabbb02d0ec18cc9be42c
 			return true;
 		}
 		else{
@@ -31,7 +34,11 @@ public class Parallelogram extends Trapezium {
 
 	
 	@Override
-
+<<<<<<< HEAD
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+=======
 	double getArea() {
 		double area;
 		double line1;
@@ -42,6 +49,7 @@ public class Parallelogram extends Trapezium {
 		
 	
 		return area;
+>>>>>>> e683a78250bb08a4da6aabbb02d0ec18cc9be42c
 	}
 	
 	
