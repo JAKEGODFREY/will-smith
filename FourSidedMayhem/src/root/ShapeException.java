@@ -1,5 +1,7 @@
+package src.root;
 
-public class ShapeException {
+
+public class ShapeException extends Exception {
 
 	public ShapeException(Parallelogram p, Point p1, Point p2, Point p3, Point p4) {
 
