@@ -1,5 +1,7 @@
 package src.root;
 
+import javafx.scene.effect.Light.Point;
+
 public class Line {
 	
 	
