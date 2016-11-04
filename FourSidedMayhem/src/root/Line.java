@@ -20,9 +20,9 @@ public class Line {
 	 * Returns the length of a line.
 	 * @return
 	 */
-	public double getLength()
+	public double getLength(Point np1, Point np2)
 	{
-		double length = p1.distanceTo(p2);		
+		double length = np1.distanceTo(np2.getX(), np2.getY());
 		return length;
 	}
 	
