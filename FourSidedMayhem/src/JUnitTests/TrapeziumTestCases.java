@@ -6,8 +6,10 @@ import org.junit.Test;
 public class TrapeziumTestCases {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void getAreaTest() {
+		Trapezium testTrapezium = new Trapezium(10); 
+		
+		assertEquals("area must be 100", 100, testTrapezium.getArea());
 	}
 
 }
