@@ -1,0 +1,8 @@
+
+public class Parallelogram {
+	
+	public boolean isParallelogram(){
+		
+	}
+	
+}

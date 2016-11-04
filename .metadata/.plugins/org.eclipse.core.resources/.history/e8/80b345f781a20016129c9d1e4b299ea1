@@ -1,0 +1,39 @@
+package src.root;
+
+public class Parallelogram extends Quadrilateral {
+	
+	static boolean isParallelogram(){
+		if ((line 1 == line3 )&&(line2 == line4 )){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	public Parallelogram (){
+		
+	
+			
+	}
+
+	@Override
+	void parallels() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	double getPerimeter() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+}

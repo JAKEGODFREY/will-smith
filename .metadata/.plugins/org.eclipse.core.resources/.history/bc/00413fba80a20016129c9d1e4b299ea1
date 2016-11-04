@@ -1,0 +1,16 @@
+
+public class Parallelogram {
+	
+	public boolean isParallelogram(){
+		if ((this.side1 == this.side3 )&&(this.side2 == this.side4 )){
+			return true
+		}
+		else{
+			return false;
+		}
+			
+			
+	}
+	
+	
+}

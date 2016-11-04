@@ -1,0 +1,21 @@
+package src.root;
+
+public class Parallelogram {
+	
+	static boolean isParallelogram(){
+		if ((this.side1 == this.side3 )&&(this.side2 == this.side4 )){
+			return true
+		}
+		else{
+			return false;
+		}
+	}
+	
+	public Parallelogram (){
+		
+	
+			
+	}
+	
+	
+}
