@@ -1,4 +1,4 @@
-package src.root;
+
 public class Trapezium extends Quadrilateral{
 
 	private longBase;
@@ -20,26 +20,6 @@ public class Trapezium extends Quadrilateral{
 		}
 
 		return isTrapezium;
-	}
-
-
-	@Override
-	double getPerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-
-	@Override
-	void parallels() {
-		// TODO Auto-generated method stub
-		
 	}
 	
 	
