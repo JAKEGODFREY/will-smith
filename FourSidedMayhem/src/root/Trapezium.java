@@ -9,10 +9,10 @@ public class Trapezium extends Quadrilateral{
 	public boolean isTrapezium(Quadrilateral quad){
 		boolean isTrapezium = false;
 				
-		if(longBase.getSlope()==shortBase.getSlope()){
+		if(longBase.getSlope()==shortBase.getSlope() && slantingSide1.getSlope()!=slantingSide2.getSlope()){
 			isTrapezium = true;
 		}
-		else if(slantingSide1.getSlope()==slantingSide2.getSlope()){
+		else if(slantingSide1.getSlope()==slantingSide2.getSlope() && longBase.getSlope()!=shortBase.getSlope()){
 			isTrapezium = true;
 		}
 		else{
@@ -23,21 +23,27 @@ public class Trapezium extends Quadrilateral{
 	}
 
 	@Override
-	void parallels() {
-		// TODO Auto-generated method stub
-		
+	int parallels() {
+		int numberOfParallelSides = 0;
+		if(longBase.getSlope()==shortBase.getSlope()){
+			numberOfParallelSides += 1;
+		}
+		if(slantingSide1.getSlope()==slantingSide2.getSlope()){
+			numberOfParallelSides += 1;
+		}
+		return numberOfParallelSides;
 	}
 
 	@Override
 	double getPerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		return longBase.getLength() + shortBase.getLength() + slantingSide1.getLength() + slantingSide2.getLength();
 	}
 
 	@Override
 	double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		double lengthDifference = longBase.getLength() - shortBase.getLength();
+		double height = Math.sqrt((slantingSide1.getLength()*slantingSide1.getLength())-(lengthDifference*lengthDifference));
+		return ((longBase.getLength()+shortBase.getLength())/2)*height;
 	}
 	
 	
