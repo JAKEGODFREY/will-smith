@@ -6,7 +6,7 @@ public class Parallelogram extends Trapezium {
 		
 		Quadrilateral quad = new Parallelogram(point1, point2, point3, point4);
 			
-		if ((quad.getLine1() == quad.getLine3())&&(quad.getLine2() == quad.getLine4() )){
+		if ((quad.getLine1().getLength(point1, point2) == quad.getLine3().getLength(point3, point4))&&(quad.getLine2().getLength(point2, point3) == quad.getLine4().getLength(point4, point1) )){
 			return true;
 		}
 		else{
@@ -22,21 +22,24 @@ public class Parallelogram extends Trapezium {
 	this.setPoint4(point4);
 	
 	this.setLine1(new Line(point1, point2));
-	this.setLine1(new Line(point2, point3));
-	this.setLine1(new Line(point3, point4));
-	this.setLine1(new Line(point4, point1));
+	this.setLine2(new Line(point2, point3));
+	this.setLine3(new Line(point3, point4));
+	this.setLine4(new Line(point4, point1));
 	
 	}
 
-	@Override
-	void parallels() {
-		// TODO Auto-generated method stub
-	}
-
+	
 	@Override
 	double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		double area;
+		double line1;
+		double line2;
+		line1 = this.getLine1().getLength(getPoint1(), getPoint2());
+		line2 = this.getLine2().getLength(getPoint2(), getPoint3());
+		 area = (line1 * line2);
+		
+	
+		return area;
 	}
 	
 	
